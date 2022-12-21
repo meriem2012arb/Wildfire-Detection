@@ -3,7 +3,7 @@
 # Project Description 
 Our objective is to classify an image that shows forest with fire from an image of forrest without fire
  
-![alt text](https://github.com/meriem2012arb/Capstone1_project--ML-zoomcamp-/blob/main/images/002.jpg)
+![alt text](https://github.com/meriem2012arb/Capstone1_project/blob/main/images/006.jpg)
     
 Goal : 
 ......
