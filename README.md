@@ -1,12 +1,13 @@
 # Wildfire Detection 
 
 # Project Description 
+
+    
+### Goal : 
 Our objective is to classify an image that shows forest with fire from an image of forrest without fire
  
 ![alt text](https://github.com/meriem2012arb/Capstone1_project/blob/main/images/006.jpg)
-    
-Goal : 
-......
+
 
 This project is a part of the [ml-zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) course
 
