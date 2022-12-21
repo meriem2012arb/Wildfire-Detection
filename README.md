@@ -4,7 +4,7 @@
 
     
 ### Goal : 
-Our objective is to classify an image that shows forest with fire from an image of forrest without fire
+Our objective is to differentiate between an image that shows forest with fire from an image of forrest without fire, using Transfer Learning
  
 ![alt text](https://github.com/meriem2012arb/Capstone1_project/blob/main/images/006.jpg)
 
