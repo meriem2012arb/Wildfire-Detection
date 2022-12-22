@@ -35,7 +35,7 @@ folders:
 
 ```Fire_Forest_data`` Dataset
 
-```....h5``` pre-trained model.
+```model_inc_final.h5``` pre-trained model.
 
 ```notebook.ipynb``` Jupyter notebook with the Exploratory Data Analysis and Model selection
 
@@ -45,7 +45,15 @@ folders:
 
 ```requirements.txt``` requirements file for ```predict.py``` deployment
 
-```train.py``` Final model training and saving with ```....```
+```train.py``` Final model training (saved model) 
+
+### Model training
+3 architectures were chosen for Transfer Learning:
+```
+Xception
+ResNet
+Inception```
+
 
 
 
@@ -64,7 +72,7 @@ Activate the environment running in shell:
 
 When then environment is activated, install everything using 'pipenv' instead of 'pip', for this project, to creat the Pipfile and the Piplock.file, we run (since you have them already in the folder, you do not need to run the following command line):
 
-``` pipenv install numpy scikit-learn==1.1.2 xgboost flask gunicorn``` 
+``` pipenv install  tensorflow keras pillow flask gunicorn``` 
 
 The Pipfile records what you have installed (thus only run the packages installation once) and in the Pipfile.lock are the packages checksums.
 
@@ -104,12 +112,12 @@ Exit the container shell with Ctrl + d.
 
 The Dockerfile is this folder installs python, runs pipenv to install packages and dependencies, runs the predict.py script to open the web server and the  model and deploys it using gunicorn
 
-```docker built -t docker-stroke .```
+```docker built -t docker-fireforest .```
 (the last point means 'here', i.e., run it in the environment folder).
 
 Run the docker container with:
 
-```docker run -it --rm -p 9696:9696 docker-stroke```
+```docker run -it --rm -p 9696:9696 docker-fireforest```
 
 and the model will be deployed and ready to use.
 
