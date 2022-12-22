@@ -31,8 +31,6 @@ folders:
 
 ```Pipfile.lock```  for the virtual environment using pipenv
 
-```model_inc_final.h5``` pre-trained model.
-
 ```notebook.ipynb``` Jupyter notebook with the Exploratory Data Analysis and Model selection
 
 ```predict.py``` Model loading and web service deployment
