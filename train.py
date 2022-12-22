@@ -7,9 +7,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-import numpy as np
-import pandas as pd
-import random as rn
+
 from pathlib import Path
 import pathlib
 import os.path
@@ -17,14 +15,9 @@ import os
 os.environ['PYTHONHASHSEED'] = '0'
 
 
-import matplotlib.pyplot as plt
-import seaborn as sbn
-import plotly.express as px
 
 from PIL import Image
 import PIL
-import cv
-import glob
 
 
 from tensorflow import keras
@@ -35,10 +28,10 @@ from tensorflow.keras.preprocessing.image import *
 from keras import models, layers, optimizers                  
 from tensorflow.keras.models import load_model
 
-import tensorflow.keras.applications.xception as xc
-from tensorflow.keras.applications import Xception
+
+
 from keras.applications.inception_v3 import InceptionV3
-from keras.applications import ResNet50
+
 
 
 
@@ -132,11 +125,7 @@ model_inc.compile(loss='binary_crossentropy',
              optimizer='Adam', 
              metrics=['acc'],
              run_eagerly=True)
-    
-print(model_inc.summary())
-
-
-
+   
 
 
 history_inc = model_inc.fit(train_dataset, epochs=10,
@@ -145,48 +134,10 @@ history_inc = model_inc.fit(train_dataset, epochs=10,
 
 
 
-plt.plot(history_inc.history['acc'], label='val')
-plt.xticks(np.arange(10))
-plt.legend()
 
 
 
 
-
-# Dictionary to extract the numbers 
-hist_dict = history_inc.history
-
-# Training and validation accuracy 
-training_acc = hist_dict['acc']
-validation_acc = hist_dict['val_acc']
-
-# Training and validation loss 
-training_loss = hist_dict['loss']
-validation_loss = hist_dict['val_loss']
-
-# Number of epochs 
-epoches = range(1, 1 + len(training_acc))
-
-
-def plot_func(entity):
-    
-    '''
-    This function produces plot to compare the performance 
-    between train set and validation set. 
-    entity can be loss of accuracy. 
-    '''
-    
-    plt.figure(figsize=(8, 5))
-    plt.plot(epoches, eval('training_' + entity), 'r')
-    plt.plot(epoches, eval('validation_' + entity), 'b')
-    plt.legend(['Training ' + entity, 'Validation ' + entity])
-    plt.xlabel('Epoches')
-    plt.ylabel(entity)
-    plt.show()
-
-
-plot_func('acc')
-plot_func('loss')
 
 
 def evaluation(model):
@@ -194,32 +145,18 @@ def evaluation(model):
     print('test acc:', test_acc)
     print('test_loss:',test_loss)
     Y_pred = model.predict(test_dataset)
-    predictions = np.round(Y_pred)
-    import sklearn.metrics as metrics
-    val_trues =test_dataset.classes
-    from sklearn.metrics import classification_report, accuracy_score
-    print(classification_report(val_trues, predictions))
-    print(metrics.confusion_matrix(val_trues, predictions))
-    print( "Accuracy: ", accuracy_score(val_trues,predictions))
-
-
-
-
-
+   
+    
 evaluation(model_inc) 
 
 
 
 # ### Saving the choosing model 
 
-
-
 model_inc.save('model_inc_final.h5', save_format='h5')
 
 
 # ### Convert model to TFLite
-
-
 
 import tensorflow as tf
 import keras
