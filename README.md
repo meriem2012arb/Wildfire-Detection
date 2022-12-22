@@ -25,6 +25,8 @@ folders:
  ```
 ### Table of Contents :
 
+```images``` Folder contains some images (not from the used dataset ) 
+
 ```Dockerfile``` of a Docker container
 
 ```Pipfile```  for the virtual environment using pipenv
@@ -90,7 +92,7 @@ In the active environment and open the web server by running:
 
 (use 'waitress' instead of 'gunicorn' if you are in Windows).
 
-An image is imported in 'predict_test.py'. Test the deployment by running it in other shell:
+ image from ```images``` is imported in 'predict_test.py'. Test the deployment by running it in other shell:
 
 ```python3 predict_test.py```
 
