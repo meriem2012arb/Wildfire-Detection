@@ -112,7 +112,7 @@ Exit the container shell with Ctrl + d.
 
 The Dockerfile is this folder installs python, runs pipenv to install packages and dependencies, runs the predict.py script to open the web server and the  model and deploys it using gunicorn
 
-```docker built -t docker-fireforest .```
+```docker build -t docker-fireforest .```
 (the last point means 'here', i.e., run it in the environment folder).
 
 Run the docker container with:
