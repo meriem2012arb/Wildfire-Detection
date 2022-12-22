@@ -48,7 +48,8 @@ folders:
 
 3 architectures were chosen for Transfer Learning:
 
-```Xception
+```
+Xception
 ResNet
 Inception
 ```
