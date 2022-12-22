@@ -31,10 +31,6 @@ folders:
 
 ```Pipfile.lock```  for the virtual environment using pipenv
 
-```dv.bin```  Pre-made DictVectorizer object, necessary for creating the data structures needed for prediction
-
-```Fire_Forest_data`` Dataset
-
 ```model_inc_final.h5``` pre-trained model.
 
 ```notebook.ipynb``` Jupyter notebook with the Exploratory Data Analysis and Model selection
@@ -47,12 +43,15 @@ folders:
 
 ```train.py``` Final model training (saved model) 
 
+
 ### Model training
+
 3 architectures were chosen for Transfer Learning:
-```
-Xception
+
+```Xception
 ResNet
-Inception```
+Inception
+```
 
 
 
