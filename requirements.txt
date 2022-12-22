@@ -1,0 +1,11 @@
+tensorflow ==2.8.0
+keras== 2.6.0
+scikit-learn==1.1.2  
+numpy==1.23.3 
+gunicorn==20.1.0  
+matplotlib==3.5.2  
+seaborn==0.12.0 
+pipenv==2022.11.5    
+flask==2.2.2 
+pillow
+scipy 
