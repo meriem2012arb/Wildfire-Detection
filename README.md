@@ -92,17 +92,17 @@ In the active environment and open the web server by running:
 
 (use 'waitress' instead of 'gunicorn' if you are in Windows).
 
-The data of a new patient are written in 'predict_test.py'. Test the deployment by running it in other shell:
+An image is imported in 'predict_test.py'. Test the deployment by running it in other shell:
 
 ```python3 predict_test.py```
 
-The output (if that client will get a stroke or not and the probability) will be written in the shell.
+The output (if that image shows fire forest or not and the probability) will be written in the shell.
 
 Close the web server with Ctrl + c.
 
 ##  Docker
 
-We do not need to install packages, activate environments, train models,... everytime we want to know if a new patient will get stroke or not. We can skip the former sections using a Docker container.
+We do not need to install packages, activate environments, train models,... everytime we want to know if a new image shows fire forest  or not. We can skip the former sections using a Docker container.
 
 First, create a Docker image locally by running in shell (the enviroment does not need to be activated):
 
@@ -125,7 +125,7 @@ To send a new request, open a new shell in the enviroment directory and directly
 
 ```python3 predict_test.py```
 
-and you will see if the patient will get a stroke or not and its probability.
+and you will see if the image shows fire forest  or not and its probability.
 
 Close the container with Ctrl + c.
 
